@@ -1,0 +1,197 @@
+/* Image and Slider Section */
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* Main Image Styles */
+.image-large {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+ 
+.image-large img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  max-height: 400px;
+}
+ 
+/* Slider Container */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  background-color: #d0d0d6; /* Add background color */
+  border-radius: 8px;
+}
+ 
+/* Slider Controls */
+.slider-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+ 
+.slider-button.prev {
+  left: 5px;
+}
+ 
+.slider-button.next {
+  right: 5px;
+}
+ 
+/* Slider Area */
+.slider {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  width: calc(100% - 60px); /* Adjust for button space */
+  margin: 0 30px;
+ 
+}
+ 
+.slider img {
+  width: 70px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #a4a3a8;
+}
+ 
+ .slider img.active {
+  border: 2px solid #dfe5eb;
+}
+ 
+.slider img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+ 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+    background-color: #cac7d1; /* Background stays consistent */
+  }
+ 
+  .slider img {
+    width: 60px;
+    height: 50px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .slider-container {
+    padding: 5px;
+    background-color: #f8f8fb;
+  }
+ 
+  .slider img {
+    width: 50px;
+    height: 40px;
+  }
+}
+ 
+@media (max-width: 320px) {
+  .slider img {
+    width: 40px;
+    height: 30px;
+  }
+}
+ 
+ 
+ 
+.image-large {
+  width: 100%;
+  height: 500px; /* Set the desired container height */
+  max-height: 800px; /* This will ensure it doesn't exceed 800px */
+  border-radius: 8px;
+  background-color: #d6f5ff; /* Fallback background color */
+ 
+  background-size: cover; /* Adjust background size */
+  background-position: center; /* Center the background image */
+}
+ 
+ 
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+   
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    border-radius: 8px; /* Rounded corners */
+}
+ 
+ 
+ 
+ 
+  /* Slider Area */
+  .slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    width: calc(100% - 60px); /* Adjust for button space */
+    margin: 0 30px;
+    background-color: #d5d7e4; /* Optional: Different background inside the slider */
+  }
+ 
+ 
+ 
+ 
+ 
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .slider-container {
+      padding: 10px; /* Adjust padding for smaller screens */
+      background-color: #a4a3a8;
+    }
+   
+}
+ 
+ 
+.custom-bg {
+
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  height: 400px; /* Set a fixed height */
+  min-height: 100vh; /* Set minimum height to 100% of the viewport */
+  width: 100%; /* Make sure the background spans the full width */
+}
+ 
+.btn-outline-dark {
+    color: rgb(5, 5, 5) !important; /* Change text color to white */
+    border-color: white; /* Optional: Change border color to white */
+}
+ 
+.btn-outline-dark:hover {
+    background-color: white; /* Optional: Change background color on hover */
+    color: rgb(11, 11, 11) !important; /* Optional: Change text color on hover */
+}

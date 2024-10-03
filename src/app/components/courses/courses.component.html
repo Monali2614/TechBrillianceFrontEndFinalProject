@@ -1,0 +1,382 @@
+
+<!-- Carousel Controls -->
+<div class="courses-slider">
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container my-4"  id="scrollspyHeading2">
+  <!-- Left-aligned heading -->
+  <h1 class="text-start" >Choose Our Top Courses</h1>
+ 
+  <!-- Vertical Links Section -->
+  <div
+    class="d-flex justify-content-center justify-content-md-end flex-wrap mt-3"
+  >
+    <a
+      [routerLink]="['/allcourses']"
+      class="link text-primary fw-bold me-3 mb-2"
+      >Explore all courses</a
+    >
+    <a
+      href="../../../assets/Tech Brilliance.pdf"
+      download
+      class="link text-primary fw-bold me-3 mb-2"
+      >Download Brochure</a
+    >
+    <a
+      href="https://forms.office.com/r/DeCeDqgpek"
+      class="link text-primary fw-bold mb-2"
+      >Request Demo Class</a
+    >
+  </div>
+</div>
+ 
+<div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel"
+data-bs-interval="3000">
+  <div class="carousel-inner">
+    <!-- First Slide -->
+    <div class="carousel-item active">
+      <div class="card-wrapper container-sm d-flex justify-content-around">
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="assets/courses/JAVA.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Java Full Stack Development</h5>
+            <p class="card-text">
+              Here is a course where we offer corporate-level training along
+              with hands-on experience through real-world projects in Java Full
+              Stack Development. This program focuses on building complete web
+              applications, covering both front-end and back-end development.
+              You will gain expertise in technologies like HTML, CSS, JavaScript
+              (Angular/React), and Java with Spring Boot, covering the entire
+              software development lifecycle.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses/Software Developer 1.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Software Developer</h5>
+            <p class="card-text">
+              Master comprehensive training with real-world project experience
+              in Software Development. This course prepares you to design, code,
+              test, and maintain software for various platforms such as web,
+              mobile, and cloud. With this training, you'll master the entire
+              software development lifecycle and gain experience in solving
+              real-world challenges with innovative software solutions.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses/LINUX 1.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Linux</h5>
+            <p class="card-text">
+              For those seeking expertise in open-source systems, we provide a
+              Linux course with real-world project experience. This course
+              covers everything from Linux basics to advanced system
+              administration, giving you the skills to manage servers, desktops,
+              and embedded systems efficiently.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Second Slide -->
+    <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex justify-content-around">
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses/AWS 1.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">AWS Cloud</h5>
+            <p class="card-text">
+              Our AWS Cloud course that provides hands-on experience with
+              real-world cloud solutions. This course covers essential AWS
+              services, including cloud infrastructure, storage, computing, and
+              databases. You'll learn to build, deploy, and manage scalable
+              applications in the AWS environment.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses/DEVOPS 1.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">DevOps</h5>
+            <p class="card-text">
+              Our specialized training in DevOps with a focus on hands-on
+              projects. This program introduces you to modern practices like
+              continuous integration and continuous delivery (CI/CD),
+              automation, and collaboration between development and operations
+              teams. You will gain realworld experience in deploying,
+              monitoring, and scaling applications effectively.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses/Data Analyst 1.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Data Analyst</h5>
+            <p class="card-text">
+              Get trained in Data Analyst course tailored for professionals
+              seeking practical experience with real-world data. Learn how to
+              collect, analyze, and interpret data using tools like Excel and
+              SQL. This course is designed to equip you with the skills needed
+              to help organizations make datadriven decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Third Slide -->
+    <!-- <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex justify-content-around">
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/Business Analyst.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Business Analyst</h5>
+            <p class="card-text">
+              Here is another excellent program: Business Analysis. This course
+              provides corporate-level training focused on bridging the gap
+              between business needs and technical solutions. You’ll gain
+              practical experience in business process mapping, requirement
+              gathering, and translating them into technical specifications.
+            </p>
+          </div>
+        </div> -->
+    <!-- <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/AWS.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">AWS Cloud</h5>
+            <p class="card-text">
+              Our AWS Cloud course that provides hands-on experience with
+              real-world cloud solutions. This course covers essential AWS
+              services, including cloud infrastructure, storage, computing, and
+              databases. You'll learn to build, deploy, and manage scalable
+              applications in the AWS environment.
+            </p>
+          </div>
+        </div> -->
+    <!-- <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/Digital Marketing.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Digital Marketing</h5>
+            <p class="card-text">
+              For those interested in online strategies, we provide a complete
+              Digital Marketing course with real-world project experience. This
+              course covers SEO, content marketing, PPC, social media, and email
+              campaigns, helping you master the art of promoting products and
+              services in the digital landscape.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+ 
+    <!-- Fourth Slide - New Courses -->
+    <!-- <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex justify-content-around">
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/Power BI.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Power BI</h5>
+            <p class="card-text">
+              In our Power BI. Learn how to transform raw data into actionable
+              insights using Microsoft’s powerful analytics tool. You'll work on
+              real-world projects to build interactive dashboards and reports,
+              helping businesses make informed, data-driven decisions.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/Data Analyst.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Data Analyst</h5>
+            <p class="card-text">
+              Get trained in Data Analyst course tailored for professionals
+              seeking practical experience with real-world data. Learn how to
+              collect, analyze, and interpret data using tools like Excel and
+              SQL. This course is designed to equip you with the skills needed
+              to help organizations make datadriven decisions.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/Python Programing.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text">
+              We also offer a hands-on Python course with a strong emphasis on
+              real-world applications. This course covers the essentials of
+              Python programming, including web development, data analysis, and
+              automation, giving you practical experience in building dynamic,
+              scalable solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+ 
+    <!-- Fifth Slide - New Courses Continued -->
+    <!-- <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex justify-content-around">
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/HR.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Human Resources (HR)</h5>
+            <p class="card-text">
+              We also offer training in Human Resources with real-world
+              experience in corporate settings. This course covers key HR
+              functions such as recruitment, employee relations, and compliance,
+              helping you manage and support employees effectively throughout
+              their career lifecycle.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/English Speaking.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">English Speaking</h5>
+            <p class="card-text">
+              Here’s a course focused on improving your communication skills:
+              English Speaking. We offer corporate-level training designed to
+              enhance your fluency, pronunciation, and vocabulary, preparing you
+              for professional interactions in both formal and informal
+              settings.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/Cyber Security.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Cybersecurity</h5>
+            <p class="card-text">
+              Explore our Cybersecurity course with hands-on training in
+              protecting digital assets. Learn how to safeguard systems from
+              cyberattacks through real-world scenarios, covering topics like
+              firewalls, encryption, intrusion detection, and security audits
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+ 
+    <!-- Sixth Slide - Additional Courses -->
+    <!-- <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex justify-content-around">
+        <div class="card" style="width: 23rem">
+          <img
+            class="card-img-top"
+            src="../../../assets/courses images 1 (1)/LINUX.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Linux</h5>
+            <p class="card-text">
+              For those seeking expertise in open-source systems, we provide a
+              Linux course with real-world project experience. This course
+              covers everything from Linux basics to advanced system
+              administration, giving you the skills to manage servers, desktops,
+              and embedded systems efficiently.
+            </p>
+          </div>
+        </div> -->
+    <!-- <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="./assets/img/17PROJECT MANAGEMENT.png">
+                  <div class="card-body">
+                      <h5 class="card-title">Project Management</h5>
+                      <p class="card-text">Learn to lead projects effectively using various methodologies.</p>
+                  </div>
+              </div> -->
+    <!-- <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="./assets/img/18UX DESIGN.png">
+                  <div class="card-body">
+                      <h5 class="card-title">UX Design</h5>
+                      <p class="card-text">Understanding user experience principles to design better interfaces.</p>
+                  </div>
+              </div> -->
+  </div>
+</div>
+<!-- </div> -->
+ 
+<!-- Carousel Controls -->
+<div class="courses-slider">
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

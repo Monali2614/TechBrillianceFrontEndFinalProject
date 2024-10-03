@@ -1,0 +1,27 @@
+<div class="instructors-section" id="scrollspyHeading3">
+  <div class="header-title">
+    <h1 class="section-title" >Meet Our Instructors</h1>
+  </div>
+  <div class="instructors-container">
+    <!-- instructor.component.html -->
+    <div class="instructor-list">
+      <div *ngFor="let instructor of Instructors" class="instructor-card">
+        <!-- Header section -->
+        <div class="header-section">
+          <h2>{{ instructor.Name }}</h2>
+          <h4>{{ instructor.Title }}</h4>
+        </div>
+        <!-- Details section -->
+        <div class="details-section">
+          <p><strong>Experience:</strong> {{ instructor.Experience }}</p>
+          <p><strong>Companies:</strong> {{ instructor.Companies }}</p>
+          <p><strong>Expertise:</strong> {{ instructor.Expertise }}</p>
+          <!-- <p><strong>Certification:</strong> {{ instructor.Certification }}</p>
+        <p><strong>Education:</strong> {{ instructor.Education }}</p>
+        <p><strong>Achievements:</strong> {{ instructor.Achievements }}</p> -->
+          <p><strong>Teaching Approach:</strong> {{ instructor.Approach }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

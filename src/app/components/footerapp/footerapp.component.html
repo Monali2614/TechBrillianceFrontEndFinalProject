@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Design Course</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+ 
+    <footer class="footer">
+      <div class="container">
+        <img
+              src="./assets/img/tech.jpg"
+              alt="Tech Brilliance Academy"
+              class="img-fluid mb-1"
+              width="100px"
+            />
+        <div class="row">
+          <!-- Logo & Contact Info -->
+          <div class="col-md-3 company-info">
+            <!-- <img
+              src="./assets/footer1.jpeg"
+              alt="Tech Brilliance Academy"
+              class="img-fluid mb-1"
+              width="100px"
+            /> -->
+            <p><i class="fas fa-phone"></i> 9226592994</p>
+            <p><i class="fas fa-envelope"></i> Techbrilliance.in</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Silver Oak Plaza, Pote Road,
+              Amravati, Maharashtra, 444444
+            </p>
+            <p><i class="fas fa-briefcase"></i> Businesses</p>
+            <div class="social-icons mt-3">
+              <a href="https://www.facebook.com/share/VKaNbFA1hmKSR99r/?mibextid=qi2Omg"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/tech_brilliance_academy?igsh=OTV2Nm5tZWh6dHpn"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+ 
+          <!-- Company Links -->
+          <div class="col-md-2">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-dark text-decoration-none" href="#scrollspyHeading1">About</a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#scrollspyHeading2">Courses</a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#scrollspyHeading3">Instructor</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#careersModal">Careers</a>
+              </li>
+            </ul>
+          </div>
+ 
+          <!-- Useful Links -->
+          <div class="col-md-2">
+            <h5>Useful Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-dark text-decoration-none" href="https://g.co/kgs/ZYjY9dS" target="_blank">Location</a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="tel:+919226592994"
+                  >Help Center</a
+                >
+              </li>
+            </ul>
+          </div>
+ 
+          <!-- Popular Categories -->
+          <div class="col-md-3">
+            <h5>Popular Categories</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-dark text-decoration-none" href="#scrollspyHeading2"
+                  >Software Development</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#scrollspyHeading2"
+                  >Cyber Security</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#scrollspyHeading2"
+                  >Data Analyst</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#scrollspyHeading2">Linux</a>
+              </li>
+            </ul>
+          </div>
+ 
+          <!-- Subscribe Section -->
+          <div class="col-md-2">
+            <h5>Subscribe</h5>
+            <p>
+              1000+ Our students are subscribed around the world. Don’t be shy,
+              introduce yourself!
+            </p>
+            <!-- <form action="#">
+              <div class="d-flex">
+                <input type="email" placeholder="your e-mail" required />
+                <button type="submit" class="btn-send">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </form> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+ 
+    <!-- Modal for Careers -->
+    <div class="modal fade" id="careersModal" tabindex="-1" aria-labelledby="careersModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="careersModalLabel">Career Options</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form #careerForm="ngForm" (ngSubmit)="submitCareerDetails(careerForm)">
+              <div class="mb-3 input-container">
+                <i class="icon fa fa-user"></i>
+                <input type="text" class="form-control custom-input" id="name" 
+                       placeholder="Name" [(ngModel)]="careerFormData.name" 
+                       name="name" required>
+                <div *ngIf="careerForm.controls.name?.invalid && careerForm.controls.name?.touched" class="text-danger">
+                  Name is required.
+                </div>
+              </div>
+    
+              <div class="mb-3 input-container">
+                <i class="icon fa fa-envelope"></i>
+                <input type="email" class="form-control custom-input" id="email" 
+                       placeholder="Email" [(ngModel)]="careerFormData.email" 
+                       name="email" required>
+                <div *ngIf="careerForm.controls.email?.invalid && careerForm.controls.email?.touched" class="text-danger">
+                  Valid email is required.
+                </div>
+              </div>
+    
+              <div class="mb-3 input-container">
+                <i class="icon fa fa-phone"></i>
+                <input type="text" class="form-control custom-input" id="contact" 
+                       placeholder="Contact no" [(ngModel)]="careerFormData.contactNumber" 
+                       name="contactNumber" required>
+                <div *ngIf="careerForm.controls.contactNumber?.invalid && careerForm.controls.contactNumber?.touched" class="text-danger">
+                  Contact number is required.
+                </div>
+              </div>
+    
+              <div class="mb-3 input-container">
+                <i class="icon fa fa-briefcase"></i>
+                <input type="text" class="form-control custom-input" id="work-experience" 
+                       placeholder="Work experience in years" [(ngModel)]="careerFormData.workExperience" 
+                       name="workExperience" required>
+                <div *ngIf="careerForm.controls.workExperience?.invalid && careerForm.controls.workExperience?.touched" class="text-danger">
+                  Work experience is required.
+                </div>
+              </div>
+    
+              <div class="mb-3 input-container">
+                <i class="icon fa fa-globe"></i>
+                <input type="text" class="form-control custom-input" id="desired-domain" 
+                       placeholder="Desired domain" [(ngModel)]="careerFormData.desiredDomain" 
+                       name="desiredDomain" required>
+                <div *ngIf="careerForm.controls.desiredDomain?.invalid && careerForm.controls.desiredDomain?.touched" class="text-danger">
+                  Desired domain is required.
+                </div>
+              </div>
+    
+              <div class="mb-3 input-container">
+                <i class="icon fa fa-file"></i>
+                <input type="file" class="form-control custom-input" 
+                       (change)="onFileChange($event)" id="resume" required>
+                <div *ngIf="!careerFormData.resume && careerForm.controls.resume?.touched" class="text-danger">
+                  Resume is required.
+                </div>
+              </div>
+    
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" [disabled]="careerForm.invalid">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
+  </body>
+</html>

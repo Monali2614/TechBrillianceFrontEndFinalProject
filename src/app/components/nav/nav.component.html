@@ -1,0 +1,555 @@
+<!--=============== NAVBAR ===================-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Logo and Years of Experience -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img
+        src="../../../assets/img/LOGOPNG.jpeg"
+        alt="Tech Brilliance Academy"
+        class="img-fluid logo"
+        width="100px"
+        height="100px"
+      />
+ 
+      <div class="d-flex text-primary align-items-center">
+        <div class="vr custom-vr opacity-100"></div>
+      </div>
+ 
+      <div class="years-experience ms-3">
+        <h4 class="fw-bold" style="font-size: 3rem">
+          5<span style="font-size: 1.5rem">+</span>
+        </h4>
+        <h6 class="fw-bold">YEARS</h6>
+      </div>
+    </a>
+ 
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleNavbar()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <!-- Navbar Links (Collapsible) -->
+    <div
+      [ngClass]="{ collapse: isCollapsed, 'navbar-collapse': true }"
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav text-center fw-bold mt-lg-5">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+ 
+        <!-- Talent Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Talent
+          </a>
+ 
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="dropdown-submenu">
+              <a
+                class="dropdown-item dropdown-toggle text-align fw-bold"
+                href="#"
+                >Placements</a
+              >
+              <ul class="dropdown-menu text-first">
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    100% Job Guarantee
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    We offer a 100% job guarantee* upon successful completion of
+                    the course, ensuring you're well-prepared for the job
+                    market.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    100% Placement Assistance
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Our dedicated placement cell provides end-to-end support,
+                    from job searching to interview preparation, ensuring you
+                    land your desired role.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Weekly Mock Interviews
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Hone your interview skills with regular mock interview
+                    sessions, designed to simulate real interview scenarios and
+                    boost your confidence.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Resume Building
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Receive expert guidance on crafting a professional resume
+                    that highlights your strengths and experiences, helping you
+                    stand out to employers.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Career Guidance
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Our career counsellors provide personalized guidance to help
+                    you navigate your career path and achieve your professional
+                    goals.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    One-to-One Interaction
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Benefit from personalized one-on-one interaction with our
+                    industry experts, who provide tailored advice and feedback
+                    to support your growth.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Industry-Based Internships
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Gain practical experience through industry-based
+                    internships, giving you the opportunity to apply your
+                    knowledge in real-world settings.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Doubt Sessions & Career Guidance:
+                  </a>
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Regular doubt-clearing sessions and career counselling
+                    ensure you're fully prepared for the challenges ahead and
+                    continuously advancing.
+                  </p>
+                </li>
+              </ul>
+            </li>
+ 
+            <li class="dropdown-submenu">
+              <a
+                class="dropdown-item dropdown-toggle text-align fw-bold"
+                href="#"
+                >Projects</a
+              >
+              <ul class="dropdown-menu text-first">
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Training On Industry-Based Live Projects
+                  </a>
+                  <!-- <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Hone your interview skills with regular mock interview
+                    sessions, designed to simulate real interview scenarios and boost your confidence.
+                  </p> -->
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Proper Hands-on Project
+                  </a>
+                  <!-- <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Hone your interview skills with regular mock interview
+                    sessions, designed to simulate real interview scenarios and boost your confidence.
+                  </p> -->
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    One Learning Project
+                  </a>
+                  <!-- <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Hone your interview skills with regular mock interview
+                    sessions, designed to simulate real interview scenarios and boost your confidence.
+                  </p> -->
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Two Real Time Projects
+                  </a>
+                  <!-- <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Hone your interview skills with regular mock interview
+                    sessions, designed to simulate real interview scenarios and boost your confidence.
+                  </p> -->
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+ 
+        <!-- Curriculum Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Curriculum
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- <li><a class="dropdown-item"  text-center href="#">Placements</a></li> -->
+            <li class="dropdown-submenu">
+              <a
+                class="dropdown-item dropdown-toggle text-center fw-bold"
+                href="#"
+                >Activities</a
+              >
+              <ul class="dropdown-menu text-start fw-bold">
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Flexible Batches
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Choose between a range of flexible batches that suit your
+                    schedule and learning preferences.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Online/Offline Batches
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    We offer both online and offline batches, allowing you to
+                    learn in the mode that works best for you.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Industry Expert as a Trainer
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Learn directly from industry professionals who bring their
+                    practical experience into the classroom.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Flexible Schedule for Classes
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Classes are scheduled to accommodate both working
+                    professionals and full-time students, ensuring no one misses
+                    out.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Fully Practical Training
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Our training is 100% practical, focusing on hands-on
+                    experience to ensure you are job-ready.
+                  </p>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Daily Assignment
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Reinforce your learning with daily assignments that help you
+                    apply the concepts covered in each class.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Weekly Assignment
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Weekly assessments help track your progress and ensure a
+                    deep understanding of the course material.
+                  </p>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Doubt Session
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Participate in regular doubt-clearing sessions to address
+                    any questions or challenges you encounter during the course.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Group Discussion
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Engage in group discussions to collaborate with peers,
+                    exchange ideas, and improve communication skills.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Senior Student Guidance
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Benefit from the guidance of senior students who share their
+                    experiences and offer mentorship throughout your learning
+                    journey.
+                  </p>
+                </li>
+ 
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    href="#"
+                    id="flexibleBatchesLink"
+                  >
+                    <span
+                      class="fa-duotone fa-solid fa-code"
+                      style="margin-right: 7px"
+                    ></span>
+                    Course completion certificate
+                  </a>
+ 
+                  <p id="flexibleBatchesParagraph" class="hover-paragraph">
+                    Upon successfully finishing the course, you'll receive a
+                    certificate that is recognized and valued by employers.
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#scrollspyHeading1">About Us</a></li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary mx-1 fw-bold" href="/login"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary mx-1 fw-bold" href="/registration"
+            >Sign Up</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+<div class="navbar-border-container">
+  <div class="navbar-border"></div>
+</div>

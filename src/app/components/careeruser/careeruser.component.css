@@ -1,0 +1,92 @@
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+ 
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+  }
+ 
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+  }
+ 
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    color: #555;
+    font-size: 16px;
+  }
+ 
+  th {
+    background-color: #8028d1;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+ 
+  td {
+    border-bottom: 1px solid #ddd;
+  }
+ 
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+ 
+  button:hover {
+    background-color: #da7c46;
+  }
+ 
+  @media (max-width: 768px) {
+    .table, thead, tbody, th, td, tr {
+      display: block;
+    }
+ 
+    thead {
+      display: none;
+    }
+ 
+    tr {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+ 
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      font-size: 14px;
+    }
+ 
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+ 
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }

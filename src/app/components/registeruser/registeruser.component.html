@@ -1,0 +1,20 @@
+<div class="container">
+  <h2><b>User Information</b></h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile No</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userInfoList">
+        <td data-label="Name">{{ user.name }}</td>
+        <td data-label="Email">{{ user.email }}</td>
+        <td data-label="Mobile No">{{ user.mobileNo }}</td>
+      </tr>
+    </tbody>
+   
+  </table>
+</div>

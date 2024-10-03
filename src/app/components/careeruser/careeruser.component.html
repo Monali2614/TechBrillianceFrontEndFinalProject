@@ -1,0 +1,28 @@
+<div class="container">
+  <h2><b>Career User Information</b></h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Work Experience</th>
+        <th>Desired Domain</th>
+        <th>Resume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let career of careerList">
+        <td data-label="Name">{{ career.name }}</td>
+        <td data-label="Email">{{ career.email }}</td>
+        <td data-label="Contact Number">{{ career.contactNumber }}</td>
+        <td data-label="Work Experience">{{ career.workExperience }}</td>
+        <td data-label="Desired Domain">{{ career.desiredDomain }}</td>
+        <td data-label="Resume">
+          <button (click)="downloadResume(career.id, career.name)" class="btn btn-primary">Download Resume</button>
+        </td>
+      </tr>
+    </tbody>
+   
+  </table>
+</div>

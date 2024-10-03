@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+  }
+   
+  /* Container */
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+   
+  .container:hover {
+    transform: scale(1.02);
+  }
+   
+  /* Heading */
+  .heading {
+    font-size: 2rem; /* Dynamically adjust based on viewport width */
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+   
+  .sub-heading {
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(175, 149, 149);
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+   
+  /* Success Stories Layout */
+  .success-stories {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+   
+  /* Side Columns */
+  .side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+  }
+   
+  /* Center Video */
+  .center {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   
+  /* Video Card */
+  .video-card {
+    width: 100%;
+    height: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+   
+  .video-card:hover {
+    transform: scale(1.03);
+  }
+   
+  /* Card Styling */
+  .quote-card, .quote-card-below-video {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #d6f5ff;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%, 0% 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1s ease-in-out;
+  }
+   
+  .quote-card:hover, .quote-card-below-video:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+   
+  .description p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+  }
+   
+  .description p b {
+    font-size: 23px;
+    color: #333;
+  }
+   
+  .job-title {
+    font-size: 17px;
+    font-weight: bold;
+  }
+   
+  .salary {
+    font-size: 16px;
+    color: gray;
+  }
+   
+  /* Responsive Behavior */
+  @media (max-width: 1024px) {
+    .success-stories {
+      flex-direction: column;
+      align-items: center;
+    }
+   
+    .left, .right, .center {
+      width: 100%;
+    }
+   
+    .video-card {
+      width: 100%;
+    }
+   
+    .quote-card, .quote-card-below-video {
+      width: 100%;
+      margin: 20px;
+    }
+  }
+   
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2em;
+    }
+   
+    .sub-heading {
+      font-size: 1em;
+    }
+   
+    .quote-card, .quote-card-below-video {
+      padding: 15px;
+      height: auto;
+    }
+  }
+   
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+   
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+   
+  /* Card Below Video */
+  .quote-card-below-video {
+    margin-top: 50px;
+  }

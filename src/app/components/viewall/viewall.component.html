@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles if needed */
+    .image-large img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      max-height: 500px;
+    }
+ 
+    .slider img {
+      width: 700px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+     
+    }
+ 
+    .slider img.active {
+      border: 2px solid #007bff;
+      background-color: rgb(172, 165, 179)
+    }
+ 
+    .slider img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+     
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Categories Column -->
+      <div class="col-md-3 col-lg-2 p-3 bg-light custom-bg">
+        <h3 class="text-center bg-dark text-white py-2 rounded">Categories</h3>
+        <ul class="list-unstyled mt-3">
+            <li><button class="btn btn-outline-dark btn-block mb-2" (click)="filterImages($event, 'Awards distribution')">Awards distribution</button></li>
+            <li><button class="btn btn-outline-dark btn-block mb-2" (click)="filterImages($event, 'Certificates distribution')">Certificates distribution</button></li>
+            <li><button class="btn btn-outline-dark btn-block mb-2" (click)="filterImages($event, 'Event Program')">Event Program</button></li>
+            <li><button class="btn btn-outline-dark btn-block mb-2" (click)="filterImages($event, 'Inauguration Program')">Inauguration Program</button></li>
+            <li><button class="btn btn-outline-dark btn-block mb-2" (click)="filterImages($event, 'Tree Plantation')">Tree Plantation</button></li>
+           
+        </ul>
+      </div>
+     
+     <!-- Image and Slider Section -->
+<div class="col-md-9 col-lg-10 p-3">
+    <div class="image-gallery">
+      <div class="image-large mb-3">
+        <img [src]="mainImage" alt="Main Image" />
+      </div>
+     
+      <!-- Image Slider with Background Color -->
+      <div class="d-flex align-items-center slider-container">
+        <button class="btn btn-light mr-2" (click)="prevSlide()">&#10094;</button>
+        <div class="slider d-flex overflow-auto" #sliderContainer>
+          <img *ngFor="let image of filteredImages; let i = index"
+               [src]="image.src"
+               [class.active]="i === currentIndex"
+               (click)="changeImage(image.src, i)"
+               alt="Thumbnail" />
+        </div>
+        <button class="btn btn-light ml-2" (click)="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+  </div>
+ 
+        </div>
+      </div>
+   
+ 
+ 
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

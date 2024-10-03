@@ -1,0 +1,112 @@
+<app-header></app-header>
+
+<div class="panel panel-primary" id="professorapproval">
+  <div class="panel-heading">
+    <h2 *ngIf="currRole === 'professor' || currRole === 'PROFESSOR'" class="panel-title">Your Approval Status</h2>
+    <div *ngFor="let professor of approval | async" class="status-container">
+      <div *ngIf="professor.status === 'accept'">
+        <h2><small class="status accepted">(Verified & Accepted) ID: <small class="date-cover">{{professor.professorid}}</small></small></h2>
+      </div>
+      <div *ngIf="professor.status === 'false'">
+        <h2><small class="status pending">(Not yet Verified)</small></h2>
+      </div>
+      <div *ngIf="professor.status === 'reject'">
+        <h2><small class="status rejected">(Verified & Rejected)</small></h2>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th>Identity</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Degree</th>
+          <th>Experience</th>
+          <th>Institution</th>
+          <th>Department</th>
+          <th>Mobile</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let professor of approval | async">
+          <td data-label="Identity">
+            <img *ngIf="professor.gender === 'Male' || professor.gender === 'male'" class="bloodimg" [src]="'assets/img/maleprofessor.png'" width="80" height="80">
+            <img *ngIf="professor.gender === 'Female' || professor.gender === 'female'" class="bloodimg" [src]="'assets/img/femaleprofessor.png'" width="80" height="80">
+          </td>
+          <td data-label="Name">{{professor.professorname}}</td>
+          <td data-label="Email">{{professor.email}}</td>
+          <td data-label="Degree">{{professor.degreecompleted}}</td>
+          <td data-label="Experience">{{professor.experience}} years</td>
+          <td data-label="Institution">{{professor.institutionname}}</td>
+          <td data-label="Department">{{professor.department}}</td>
+          <td data-label="Mobile">{{professor.mobile}}</td>
+          <td data-label="Status">
+            <div *ngIf="currRole === 'professor' || currRole === 'PROFESSOR' && professor.email === loggedUser">
+              <div *ngIf="professor.status === 'accept'" class="status-label accepted">Accepted</div>
+              <div *ngIf="professor.status === 'false'" class="status-label pending">Pending</div>
+              <div *ngIf="professor.status === 'reject'" class="status-label rejected">Rejected</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-primary" id="adminapproval">
+  <div class="panel-heading">
+    <h2 *ngIf="currRole === 'admin' || currRole === 'ADMIN'" class="panel-title">Approve Professor Here</h2>
+  </div>
+  <div class="panel-body">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th>Identity</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Degree</th>
+          <th>Experience</th>
+          <th>Institution</th>
+          <th>Department</th>
+          <th>Mobile</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let professor of professorlist | async">
+          <td data-label="Identity">
+            <img *ngIf="professor.gender === 'Male' || professor.gender === 'male'" class="bloodimg" [src]="'assets/img/maleprofessor.png'" width="80" height="80">
+            <img *ngIf="professor.gender === 'Female' || professor.gender === 'female'" class="bloodimg" [src]="'assets/img/femaleprofessor.png'" width="80" height="80">
+          </td>
+          <td data-label="Name">{{professor.professorname}}</td>
+          <td data-label="Email">{{professor.email}}</td>
+          <td data-label="Degree">{{professor.degreecompleted}}</td>
+          <td data-label="Experience">{{professor.experience}} years</td>
+          <td data-label="Institution">{{professor.institutionname}}</td>
+          <td data-label="Department">{{professor.department}}</td>
+          <td data-label="Mobile">{{professor.mobile}}</td>
+          <td data-label="Status">
+            <div *ngIf="loggedUser === 'admin@gmail.com' && professor.status === 'false'">
+              <button (click)="acceptRequest(professor.email)" class="btn-action accepted">Accept</button>
+              <button (click)="rejectRequest(professor.email)" class="btn-action rejected">Reject</button>
+              <div id="acceptedbtn" class="status-label accepted" style="display: none;">Accepted</div>
+              <div id="rejectedbtn" class="status-label rejected" style="display: none;">Rejected</div>
+            </div>
+            <div *ngIf="loggedUser === 'admin@gmail.com' && professor.status === 'accept'">
+              <div class="status-label accepted">Accepted</div>
+            </div>
+            <div *ngIf="loggedUser === 'admin@gmail.com' && professor.status === 'reject'">
+              <div class="status-label rejected">Rejected</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br><br><br>
+<app-footer></app-footer>

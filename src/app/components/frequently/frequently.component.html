@@ -1,0 +1,197 @@
+<div class="photo-gallery-section">
+  <!-- Full-width background wrapper -->
+  <div class="header-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2>Photos Gallery <a href="view-all" class="view-all-link">VIEW ALL</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="carousel-container">
+    <div class="carousel-inner" #carouselInner>
+      <div class="carousel-items">
+        <div
+          class="carousel-item"
+          *ngFor="let image of getVisibleImages(); let i = index"
+          [ngClass]="{'active': i === 1}"
+        >
+          <img
+            [src]="image.url || fallbackImage"
+            [alt]="image.caption || 'Image not available'"
+          />
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Controls -->
+    <button class="carousel-control prev" (click)="moveSlide(-1)">‹</button>
+    <button class="carousel-control next" (click)="moveSlide(1)">›</button>
+  </div>
+</div>
+ 
+<div class="container w-75 mt-5">
+  <div class="faq-title text-center mb-4">
+    <h1 class="fw-bold">Frequently Asked Questions</h1>
+    <p>
+      Here are the answers to the questions based on Tech Brilliance Academy's
+      100% Job Guarantee:
+    </p>
+  </div>
+ 
+ 
+  <div class="accordion" id="faqAccordion" role="tablist">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="false"
+          aria-controls="collapseOne"
+          role="button"
+        >
+          Why Tech Brilliance?
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingOne"
+        data-bs-parent="#faqAccordion"
+        role="region"
+      >
+        <div class="accordion-body">
+          Tech Brilliance Academy offers comprehensive education and skill
+          development, including a 100% Job Guarantee for eligible students. The
+          Academy provides hands-on learning, career guidance, and placement
+          support through its network and partnerships.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+          role="button"
+        >
+          What qualifications & admission requirements?
+        </button>
+      </h2>
+      <div
+        id="collapseTwo"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingTwo"
+        data-bs-parent="#faqAccordion"
+        role="region"
+      >
+        <div class="accordion-body">
+          Admission requirements and qualifications include enrolling in the
+          specified courses, meeting the minimum performance standards, and
+          adhering to the eligibility criteria outlined for the job guarantee.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+          role="button"
+        >
+          What is the duration of the course?
+        </button>
+      </h2>
+      <div
+        id="collapseThree"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingThree"
+        data-bs-parent="#faqAccordion"
+        role="region"
+      >
+        <div class="accordion-body">
+          The course duration is six months. During this time, students are
+          expected to complete all coursework, projects, and assessments to be
+          eligible for the job guarantee.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour"
+          role="button"
+        >
+          What career support services do you offer to students & graduates?
+        </button>
+      </h2>
+      <div
+        id="collapseFour"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingFour"
+        data-bs-parent="#faqAccordion"
+        role="region"
+      >
+        <div class="accordion-body">
+          Tech Brilliance Academy offers career support, including job placement
+          assistance within six months of course completion, career guidance,
+          and preparation sessions. The Academy facilitates interviews and
+          placement drives for its students through its network and
+          partnerships.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFive"
+          aria-expanded="false"
+          aria-controls="collapseFive"
+          role="button"
+        >
+          How do I access course materials & resources?
+        </button>
+      </h2>
+      <div
+        id="collapseFive"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingFive"
+        data-bs-parent="#faqAccordion"
+        role="region"
+      >
+        <div class="accordion-body">
+
+          Tech Brilliance Academy will provide all necessary course materials
+          and resources as part of the course curriculum. Students are required
+          to complete all assessments, assignments, and projects using these
+          materials.
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

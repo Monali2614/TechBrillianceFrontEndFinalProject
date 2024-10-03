@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Menu Icon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+ 
+.modal-content {
+  background-image: url('assets/img/biregisternow.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  width: 100%; /* Full width for smaller screens */
+  background-repeat: no-repeat;
+ 
+  text-align: right;
+  padding: 20px; /* Add padding for better readability */
+  border-radius: 8px; /* Optional for smoother corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+ 
+}
+ 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Adjust the width for tablet-sized screens */
+    margin: 5% auto; /* Adjust margin for better positioning */
+  }
+}
+ 
+@media (max-width: 576px) {
+  .modal-content {
+    width: 100%; /* Full width for mobile screens */
+    margin: 5% auto; /* Adjust margin for mobile */
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+}
+ 
+  </style>
+</head>
+ 
+<body>
+ 
+  <!-- Carousel -->
+  
+<div
+id="carouselExampleControls"
+class="carousel slide border mt-2"
+data-bs-ride="carousel"
+data-bs-interval="2500"
+> 
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img
+      class="d-block w-100 img-fluid"
+      src="assets/SLIDER-IMAGES-UPDATED/SI1.png"
+      alt="First slide"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      class="d-block w-100 img-fluid"
+      src="assets/SLIDER-IMAGES-UPDATED/SI2.png"
+      alt="Second slide"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      class="d-block w-100 img-fluid"
+      src="assets/SLIDER-IMAGES-UPDATED/SI3.png"
+      alt="Third slide"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      class="d-block w-100 img-fluid"
+      src="assets/SLIDER-IMAGES-UPDATED/SI4.png"
+      alt="Fourth slide"
+    />
+  </div>
+</div>
+<button
+  class="carousel-control-prev"
+  type="button"
+  data-bs-target="#carouselExampleControls"
+  data-bs-slide="prev"
+>
+  <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button
+  class="carousel-control-next"
+  type="button"
+  data-bs-target="#carouselExampleControls"
+  data-bs-slide="next"
+>
+  <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+
+<!--?-================================ Carousel Images Slider ================================================-------->
+
+<!--?-================================ Job Guarantee Panel ===================================================-------->
+
+<div class="container-fluid">
+<div class="container pb-3">
+  <div class="downpanel">
+    <div class="d-flex justify-content-center mt-2">
+      <button
+        class="btn btn-primary register-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#registerModal"
+      >
+        REGISTER NOW
+      </button>
+    </div>
+
+    <div class="heading text-center mt-3">
+      <h2>100% JOB GUARANTEE</h2>
+      <p class="terms-and-conditions">
+        <a href="/terms-and-condition">T&C Applied</a>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--?-================================ Job Guarantee Panel end =================================-------->
+
+<!------------------------------------- Modal ------------------------------------------------------->
+
+<div class="container">
+<div
+  class="modal fade"
+  id="registerModal"
+  tabindex="-1"
+  aria-labelledby="registerModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="left-section">
+          <h1>
+            100%<br />
+            JOB GUARANTEE
+          </h1>
+          <p>ENROLL NOW</p>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="right-section">
+          <form
+            [formGroup]="registerForm"
+            (ngSubmit)="submitForm()"
+            class="modal-form"
+          >
+            <div class="mb-3 form-group">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="name"
+                required
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="mobileNo" class="form-label">Mobile Number</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="mobileNo"
+                required
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                required
+              />
+            </div>
+            <button type="submit" class="btn submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!------------------------------------- Modal ------------------------------------------------------->
+
+<div
+[ngClass]="{ collapse: !isCollapsed, show: isCollapsed }"
+id="contactOptions"
+> 
+<div class="d-flex justify-content-end mb-4 contactsection pb-1">
+  <div
+    class="contactsection rounded-3"
+    style="
+      width: 100px;
+
+      box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    "
+  >
+    <a
+      href="tel:+919226592994"
+      class="text-dark text-decoration-none text-primary fw-bold"
+      style="margin-left: 44px"
+      >Call</a
+    >
+    <p class="mx-5">or</p>
+    <a
+      href="https://chat.whatsapp.com/GWqvAmNWwMl59w2NpNylIw"
+      target="_blank"
+      class="text-success text-decoration-none mx-3 fw-bold"
+    >
+      WhatsApp
+    </a>
+  </div>
+</div>
+</div>
+
+<div class="d-flex justify-content-end">
+<div>
+  <a
+    (click)="toggleCollapse()"
+    aria-expanded="isCollapsed"
+    aria-controls="contactOptions"
+  >
+    <img
+      src="assets/img/call-phone-hover-phone-ring.gif"
+      alt="contact"
+      width="50px"
+      class="contact-icon"
+      style="margin-right: 24px"
+    />
+  </a>
+</div>
+</div>

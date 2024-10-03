@@ -1,0 +1,80 @@
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+ 
+  h2 {
+    text-align: center;
+    color: #343a40; /* Dark grey */
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+ 
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+ 
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9ecef; /* Soft grey for odd rows */
+  }
+ 
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+    color: #495057; /* Medium grey */
+  }
+ 
+  th {
+    background-color: #8028d1; /* Dark grey header */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+ 
+  td {
+    border-bottom: 1px solid #dee2e6;
+  }
+ 
+  @media (max-width: 768px) {
+    .table, thead, tbody, th, td, tr {
+      display: block;
+    }
+ 
+    thead {
+      display: none;
+    }
+ 
+    tr {
+      margin-bottom: 10px;
+      border-bottom: 2px solid #dee2e6;
+    }
+ 
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      font-size: 14px;
+      position: relative;
+    }
+ 
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #6c757d;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+ 
+    td {
+      padding-left: 120px; /* Space for the labels */
+    }
+  }

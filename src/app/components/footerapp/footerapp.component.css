@@ -1,0 +1,271 @@
+/* Footer base styling */
+footer {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+ 
+.footer .company-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+ 
+.footer .company-info img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  order: -1; /* Ensures the image appears at the top */
+  align-self: flex-start;
+}
+ 
+.footer .company-info p {
+  margin: 0;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #000000; /* Black text */
+}
+ 
+.footer .company-info i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+ 
+/* Social icons styling */
+.footer .social-icons {
+  margin-top: 15px;
+}
+ 
+.footer .social-icons a {
+  margin-right: 15px;
+  font-size: 24px;
+  color: #000000; /* Black icons */
+  transition: color 0.3s, transform 0.3s;
+}
+ 
+.footer .social-icons a:hover {
+  color: #007bff; /* Blue hover color */
+  transform: scale(1.2);
+}
+ 
+/* Typography & layout */
+.footer h5 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000; /* Black text */
+}
+ 
+.footer ul {
+  padding-left: 0;
+}
+ 
+.footer ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+ 
+.footer ul li a {
+  text-decoration: none;
+  color: #000000; /* Black text */
+  font-size: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+ 
+.footer ul li a:hover {
+  color: #007bff; /* Blue hover color */
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+ 
+/* Button styling */
+.footer .btn-send {
+  background: #007bff; /* Blue send button */
+  border: none;
+  color: #ffffff; /* White text */
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+ 
+.footer .btn-send:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: rotate(360deg);
+}
+ 
+/* Subscribe section */
+.footer .d-flex {
+  gap: 10px;
+}
+ 
+.footer input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #000000; /* Black border */
+  border-radius: 25px;
+  background: #ffffff; /* White background */
+  color: #333; /* Darker text */
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+ 
+.footer input[type="email"]:focus {
+  border-color: #007bff; /* Blue focus border */
+  box-shadow: 0 0 10px #007bff;
+}
+ 
+/* Responsive layout */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+  }
+ 
+  .footer .col-md-3,
+  .footer .col-md-2 {
+    margin-bottom: 40px;
+  }
+ 
+  .footer .btn-send {
+    margin-top: 15px;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .footer .company-info {
+    align-items: center;
+  }
+ 
+  .footer input[type="email"] {
+    width: 100%;
+  }
+ 
+  .footer .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .footer .btn-send {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+.modal-content {
+  background: linear-gradient(135deg, #a8e5a3, #b2defd);
+  border-radius: 15px;
+  padding: 20px;
+  border: none;
+}
+ 
+.modal-header {
+  border-bottom: none;
+  text-align: center;
+}
+ 
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+ 
+.modal-body {
+  padding: 20px;
+}
+ 
+.modal-footer {
+  border-top: none;
+}
+ 
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+ 
+.custom-input {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  padding-left: 45px; /* Space for the icon */
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  outline: none;
+}
+ 
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 16px;
+  pointer-events: none; /* Allow input clicks over the icon */
+}
+ 
+input::placeholder {
+  color: #a0a0a0;
+}
+ 
+.submit-button {
+  background-color: #00aaff;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  width: 100%;
+}
+ 
+/* Styles specific to smaller screens */
+@media (max-width: 768px) {
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .footer input[type="email"] {
+    width: 100%;
+  }
+ 
+  .modal-content {
+    background: linear-gradient(90deg, #afffd3, #b7e1ff);
+    border-radius: 8px;
+  }
+ 
+  .modal-title {
+    font-size: 28px;
+  }
+ 
+  .icon {
+    font-size: 18px;
+  }
+ 
+  .btn-submit {
+    width: 100%;
+    background-color: #00c5e4;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+ 
+  .terms {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+ 
+  .terms a {
+    color: #00c5e4;
+    text-decoration: none;
+  }
+}
